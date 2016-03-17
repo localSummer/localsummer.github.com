@@ -1,0 +1,124 @@
+
+#search{
+	width: 100%;
+	min-width: 1263px;
+	height:600px;
+	background:url(../img/search.jpg) center no-repeat;
+	position: relative;
+}
+#search .center{
+	width:600px;
+	height:60px;
+	background-color: #000;
+	opacity: 0.7;
+	position: absolute;
+	top:50%;
+	left:50%;
+	margin:-30px 0 0 -300px;
+	border-radius: 10px;
+}
+#search .search{
+	width:446px;
+	height:54px;
+	position: absolute;
+	top:50%;
+	left:50%;
+	margin:-28px 0 0 -296px;
+	border-radius: 10px;
+	border:1px solid #666;
+	font-size: 26px;
+	color:#666;
+	outline: none;
+	padding:0 10px;
+}
+#search .button{
+	width:120px;
+	height:54px;
+	position: absolute;
+	top:50%;
+	left:50%;
+	margin:-27px 0 0 175px;
+	border-radius: 10px;
+	border:1px solid #666;
+	font-size: 22px;
+	color:#666;
+	outline: none;
+	padding:0 10px;
+	font-weight: bold;
+	background-color: #eee;
+	cursor:pointer;
+}
+#tour{
+	width:1263px;
+	height:1130px;
+	margin:30px auto;
+	text-align: center;
+}
+#tour .center h2{
+	margin:10px 0;
+	font-size: 45px;
+	letter-spacing: 2px;
+	color:#666;
+}
+#tour .center p{
+	color:#666;
+	margin:10px 0;
+}
+#tour figure{
+	border:1px solid #ddd;
+	display: inline-block;
+	border-radius: 4px;
+	padding:4px;
+	width:380px;
+	margin:15px 12px;
+	text-align: left;
+	position: relative;
+}
+#tour figure img{
+	vertical-align: middle;
+}
+#tour .info{
+	padding:5px 0 0 0;
+}
+#tour figure figcaption{
+	color:#777;
+	font-size: 14px;
+	padding:7px 0 5px 0;
+	letter-spacing: 1px;
+	line-height: 1.5;
+}
+#tour .title{
+	color:#333;
+	font-weight: normal;
+}
+#tour .price{
+	color:#f60;
+	font-size: 14px;
+}
+#tour .price strong{
+	font-size: 20px;
+	letter-spacing: 1px;
+}
+#tour .sat{
+	color:#999;
+	font-style: normal;
+	font-size: 13px;
+	float:right;
+	position: relative;
+	right:5px;
+	top:5px;
+}
+#tour .type{
+	width:90px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	background-color:  #59b200;
+	position: absolute;
+	top:4px;
+	left: 4px;
+	border-bottom-right-radius:4px;
+	font-size: 14px;
+	color:#fff;
+	letter-spacing: 1px;
+}

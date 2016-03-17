@@ -1,0 +1,130 @@
+@charset "utf-8";
+#headline{
+	width:100%;
+	min-width: 1263px;
+	height:300px;
+	background:linear-gradient(to bottom right, rgba(0,0,0,0.7),rgba(0,0,0,0)),url(../img/headline.jpg)
+}
+#headline .center{
+	width:1263px;
+	height:300px;
+	margin:0 auto;
+}
+#headline hgroup{
+	padding:100px 0 0 50px;
+}
+#headline h2{
+	color:#eee;
+	font-size: 36px;
+	letter-spacing: 1px;
+}
+#headline h3{
+	color:#eee;
+	font-size: 20px;
+	letter-spacing: 1px;
+}
+#container{
+	width:1263px;
+	margin:30px auto;
+}
+#container .sidebar{
+	width:340px;
+	float: right;
+}
+#container .sidebox{
+	border:1px solid #eee;
+	margin:0 0 10px 0;
+	text-align: center;
+}
+#container .sidebox h2{
+	font-size: 20px;
+	font-weight: normal;
+	letter-spacing: 1px;
+	height:40px;
+	line-height: 40px;
+	text-indent: 10px;
+	text-align: left;
+	background-color: #fafafa;
+	color:#666;
+}
+#container .tag{
+	padding:10px 0;
+}
+#container .tag li{
+	display: inline-block;
+	width:100px;
+	height: 35px;
+	line-height: 35px;
+	background-color: #eee;
+	margin:2px 0;
+	color:#999;
+	text-align: left;
+	text-indent: 8px;
+}
+#container .tag a{
+	display: block;
+	color:#999;
+}
+#container .tag a:hover{
+	background-color: #458b00;
+	color:#fff;
+}
+#container .figure{
+	padding:10px 0;
+}
+#container .hot figure{
+	display: inline-block;
+	color:#666;
+	padding:4px;
+}
+#container .box{
+	padding:10px 0;
+}
+#container .box a{
+	display: inline-block;
+	width:150px;
+	height:40px;
+	line-height: 40px;
+	background-color: #eee;
+	margin:2px 0;
+	color:#999;
+	text-align: left;
+	text-indent: 35px;
+}
+#container .box a.trea1{
+	background: #eee url(../img/trea1.png) 10px center no-repeat;
+}
+#container .box a.trea2{
+	background: #eee url(../img/trea2.png) 10px center no-repeat;
+}
+#container .box a.trea3{
+	background: #eee url(../img/trea3.png) 10px center no-repeat;
+}
+#container .box a.trea4{
+	background: #eee url(../img/trea4.png) 10px center no-repeat;
+}
+#container .list{
+	width:910px;
+	float: left;
+}
+#container .about{
+	color: #666;
+	font-size: 20px;
+}
+#container .about h2{
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 1px dashed #999;
+	padding: 0 0 15px 0;
+	font-size: 30px;
+	font-weight: normal;
+}
+#container .about p{
+	line-height: 2;
+	margin:20px 0;
+}
+#container .about address{
+	font-style: normal;
+	margin:20px 0;
+	line-height: 1.6;
+}
