@@ -1,0 +1,402 @@
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,form,fieldset,figure{
+	margin:0;
+	padding:0;
+}
+html{
+	font-size: 625%;
+}
+body{
+	background-color: #f5f5f5;
+	font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft YaheiUI", "Microsoft YaHei", SimHei, "\5B8B\4F53", simsun, sans-serif;
+	font-size: 0.16rem;
+}
+ul,ol{
+	list-style: outside none none;
+}
+div,figure,figcaption{
+	box-sizing: border-box;
+}
+a{
+	text-decoration: none;
+}
+img{
+	display: block;
+	max-width: 100%;
+}
+.none{
+	display: none;
+}
+.clearfix:after{
+	display: table;
+	content: "";
+	clear: both;
+}
+
+#header{
+	width:100%;
+	height:0.45rem;
+	font-size: 0.16rem;
+	background-color: #333;
+	position: fixed;
+	top:0;
+	z-index: 9999;
+}
+#header .link{
+	height:0.45rem;
+	line-height: 0.45rem;
+}
+#header .link li{
+	width:25%;
+	text-align: center;
+	float:left;
+}
+#header .link a{
+	color:#eee;
+	display: block;
+}
+#header .link a:hover,#header .active a{
+	background-color: #000;
+}
+#adver{
+	max-width:6.4rem;
+	margin:0 auto;
+	padding:0.45rem 0 0 0;
+}
+#search{
+	max-width: 6.4rem;
+	height:0.33rem;
+	margin:0 auto;
+	background-color: #ddd;
+	padding:0.03rem 0 0 0;
+	position: relative;
+}
+#search .search{
+	width:95%;
+	height:0.27rem;
+	display: block;
+	outline: none;
+	margin:0 auto;
+	font-size: 0.14rem;
+	border-radius: 0.04rem;
+	background-color: #fff;
+	border:none;
+	padding:0 0.05rem;
+}
+#search .button{
+	display: block;
+	background-color: #eee;
+	outline: none;
+	cursor: pointer;
+	color:#666;
+	border:none;
+	width:0.5rem;
+	height:0.27rem;
+	border-top-right-radius:4px;
+	border-bottom-right-radius:4px;
+	font-size: 0.12rem;
+	position:absolute;
+	top:0.03rem;
+	right:1%;
+}
+#tour{
+	max-width: 6.4rem;
+	margin:0.1rem auto 0;
+}
+#tour h2{
+	text-align: center;
+	color:#666;
+	font-size: 0.26rem;
+}
+#tour h3{
+	text-align: center;
+	font-weight: normal;
+	color:#666;
+	margin:0.05rem 0 0.1rem;
+	font-size: 0.16rem;
+}
+#tour figure{
+	width:50%;
+	float:left;
+	background-color: #eee;
+	margin:0 0 0.05rem 0;
+	font-size: 0.16rem;
+}
+#tour figure img{
+	padding:0.02rem;
+	vertical-align: middle;
+	border-radius: 0.04rem;
+}
+#tour figcaption{
+	color: #666;
+	padding:0.02rem 0.05rem;
+}
+#tour figcaption h4{
+	display: block;
+	font-weight: normal;
+	padding:0.05rem 0;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow:ellipsis;
+}
+#tour figcaption p{
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow:ellipsis;
+}
+#tour .info{
+	padding:0.1rem 0 0 0;
+	font-size: 0.16rem;
+}
+#tour .price{
+	color:#f60;
+}
+#tour .price strong{
+	letter-spacing: 0.01rem;
+}
+#tour .sat{
+	color:#999;
+	font-style: normal;
+	float: right;
+	position: relative;
+	right:0.05rem;
+}
+#headline{
+	max-width: 6.4rem;
+	margin:0 auto;
+	padding:0.45rem 0 0;
+	position: relative;
+}
+#headline hgroup{
+	position: absolute;
+	top:48%;
+	left:10%;
+}
+#headline h2{
+	color:#eee;
+	letter-spacing: 0.01rem;
+	font-size: 0.22rem;
+}
+#headline h3{
+	color:#eee;
+	letter-spacing: 0.01rem;
+	font-size: 0.14rem;
+}
+.list{
+	max-width: 6.4rem;
+	margin:0.15rem auto;
+	font-size: 0.16rem;
+	padding:0.1rem;
+	color:#666;
+}
+.list h2{
+	font-size: 0.2rem;
+	border-bottom: 1px dashed #999;
+	padding-bottom: 0.15rem;
+}
+.information figure{
+	margin: 0.15rem 0 0;
+	position: relative;
+}
+.information figure:after{
+	display: table;
+	content: "";
+	clear: both;
+}
+.information figure img{
+	width:50%;
+	float: left;
+}
+.information figure figcaption{
+	width:48%;
+	float: right;
+}
+.information .title{
+	border:none;
+	padding:0 0 0.05rem;
+	display: -webkit-box;
+	overflow: hidden;
+	-webkit-line-clamp:1;
+	-webkit-box-orient:vertical;
+}
+.information .small_title{
+	font-weight: normal;
+	padding:0;
+	display: -webkit-box;
+	overflow: hidden;
+	-webkit-line-clamp:2;
+	-webkit-box-orient:vertical;
+}
+.information .price{
+	position: absolute;
+	bottom: 0;
+}
+.information .price strong{
+	color: #f60;
+	font-size: 0.26rem;
+}
+.ticket .type{
+	margin:0.2rem 0 0.1rem;
+	border:none;
+}
+.ticket .type mark{
+	color:#fff;
+	background-color: #158b00;
+	padding:0.05rem 0.08rem;
+	border-radius: 0.04rem;
+	margin:0 0.1rem 0 0.16rem;
+}
+.ticket .form{
+	font-size: 0.2rem;
+	border:none;
+}
+.ticket .form p{
+	margin:0.1rem 0;
+}
+.ticket .form label{
+	display: block;
+	font-size: 0.16rem;
+	margin-bottom: 0.05rem;
+}
+.ticket .form input{
+	width:97%;
+	border:0.01rem solid #ccc;
+	background-color: #fff;
+	border-radius: 0.04rem;
+	padding:0.05rem;
+	color:#666;
+}
+.ticket .form .submit{
+	width:30%;
+	border-radius: 0.04rem;
+	background-color: #f60;
+	border:none;
+	color:#fff;
+	text-align: center;
+	padding:0.1rem;
+	margin:0 auto;
+	display: block;
+}
+.ticket .new{
+	margin:0.2rem 0 0;
+}
+.ticket .new ul{
+	margin:0.2rem 0 0;
+}
+.ticket .new li{
+	display: inline-block;
+	padding:0.05rem 0.1rem;
+}
+.ticket .new li:first-child{
+	padding-left:0;
+}
+.ticket .new li:nth-child(2){
+	background-color: #458b00;
+	border-radius: 0.04rem;
+	color:#fff;
+}
+.ticket table{
+	width:100%;
+	border-collapse: collapse;
+	margin-top: 0.2rem;
+	border:0.01rem solid #ddd;
+}
+.ticket table th{
+	padding:0.1rem 0;
+	border-bottom: 0.01rem solid #ddd;
+	font-weight: normal;
+}
+.ticket table td{
+	padding:0.1rem 0;
+	text-align: center;
+	border-bottom: 0.01rem solid #ddd;
+}
+.ticket table tr:nth-child(2n){
+	background-color: #fafafa;
+}
+.ticket table tr:hover{
+	background-color: #eee;
+}
+.ticket .price{
+	color:#f60;
+}
+.ticket .more2{
+	text-align: center;
+	margin:0 auto;
+	cursor: pointer;
+	display: block;
+	color:#666;
+}
+.ticket .reserve{
+	padding:0.05rem 0.1rem;
+	display: inline-block;
+	border-radius: 0.04rem;
+	background-color: #f60;
+	color:#fff;
+	text-align: center;
+}
+.about p{
+	line-height: 2;
+	margin:0.2rem 0;
+}
+.about address{
+	font-style: normal;
+	margin:0.2rem 0;
+	line-height: 1.6;
+}
+
+#footer{
+	max-width: 6.4rem;
+	margin: 0 auto;
+	background-color: #222;
+	clear: both;
+	color:#777;
+	text-align: center;
+	padding:0.1rem 0 0 0;
+}
+#footer .top{
+	padding:0 0 0.05rem 0;
+}
+
+@media (min-width:480px) and(max-width:640px){
+	#tour h2,.information .price strong{
+		font-size: 0.26rem;
+	}
+	#tour h3,#tour figure,#tour .info,.list,.ticket .form label{
+		font-size: 0.16rem;
+	}
+	#headline h2{
+		font-size: 0.22rem;
+	}
+	#headline h3{
+		font-size: 0.14rem;
+	}
+	.list h2{
+		font-size: 0.2rem;
+	}
+	#footer{
+		font-size: 0.14rem;
+	}
+}
+@media (max-width:480px){
+	#tour h2,.information .price strong{
+		font-size: 0.2rem;
+	}
+	#tour h3,#tour .info,#tour figure,.list,.ticket .form label{
+		font-size: 0.14rem;
+	}
+	#headline h2{
+		font-size: 0.18rem;
+	}
+	#headline h3{
+		font-size: 0.12rem;
+	}
+	.list h2{
+		font-size: 0.17rem;
+	}
+	.min{
+		display: none;
+	}
+	#footer{
+		font-size: 0.12rem;
+	}
+}
