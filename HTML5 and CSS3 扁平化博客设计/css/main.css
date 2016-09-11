@@ -1,0 +1,255 @@
+header {
+	background: rgba(0,0,0,0.4);
+}
+nav {
+	background: #333 transparent;
+	height: 50px;
+}
+
+ul {
+	list-style: none;
+	margin:0;
+}
+
+#banner {
+	background: transparent;
+	height:700px;
+}
+
+nav ul {
+	float: right;
+}
+
+nav ul li , nav .logo{
+	display: inline-block;
+	line-height: 50px;
+	margin-right: 20px;
+}
+
+nav ul li a ,.logo a{
+	text-decoration: none;
+	line-height: 50px;
+	display: inline-block;
+	height: 50px;
+	color: #fff;
+}
+
+
+#banner .inner {
+	max-width: 300px;
+	text-align: center;
+	margin: 0 auto;
+	position: relative;
+	top:160px;
+	color:#fff;
+}
+#banner .inner h1 {
+	margin:10px 0;
+}
+
+button {
+	border: none;
+	background-color: #333;
+	color: #eee;
+	padding: 10px;
+}
+
+#banner button {
+	padding: 14px 28px;
+	cursor: pointer;
+	font-size: 20px;
+	background-color: #18a;
+	border-radius: 6px;
+	letter-spacing: 4px;
+}
+
+#banner .inner .more {
+	margin-top: 220px;
+}
+
+#banner .inner .sub-heading {
+	line-height: 30px;
+	margin: 30px 0;
+}
+
+.logo {
+	font-size: 20px;
+	font-weight: 700;
+	letter-spacing: 1px;
+	float: left;
+	padding-left:20px;
+}
+
+h2 {
+	margin: 0;
+	font-size: 30px;
+}
+
+h3{
+	font-size: 24px;
+}
+
+p{
+	font-size: 18px;
+	letter-spacing: 1px;
+}
+
+.hr {
+	height: 2px;
+	width: 100%;
+	/* margin: 20px auto 0;
+	这个地方会导致header中nav与banner之间出现间距
+	 */
+	margin: 0 auto;
+}
+
+#banner .inner .hr {
+	width: 100%;
+	background-color: #fff;
+}
+
+.green-section {
+	text-align: center;
+	background-color: #089D80;
+	color: #fff;
+	padding: 100px 0;
+}
+
+.green-section .hr {
+	background-color: #078494;
+	width: 50%;
+}
+.wrapper {
+	max-width: 1080px;
+	margin:0 auto;
+}
+
+.green-section .wrapper h2 {
+	margin-bottom: 20px;
+}
+
+
+.green-section .icon-group .icon {
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	border: 1px solid #0D6F7c;
+	transform: rotate(45deg);
+	margin-right: 40px;
+}
+
+.green-section .icon-group {
+	margin-top: 60px;
+}
+
+.clearfix:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.gray-section {
+	background-color: #252F34;
+	color:#fff;
+}
+
+.gray-section .img-section {
+	width:45%;
+	float: left;
+}
+
+.gray-section .img-section img {
+	width: 100%;
+}
+
+/* 两个.article-preview 之间会有个一个间隙，这是因为font-size的问题，只要设置为0就可以了，里面的字体可以重新设置以覆盖父元素 */
+.gray-section .article-preview {
+	font-size: 0;
+}
+
+.gray-section .text-section {
+	width: 55%;
+	float: left;
+	position: relative;
+	top: 68px;
+	left:50px;
+}
+
+.gray-section .text-section h2 {
+	margin-bottom: 20px;
+}
+
+
+.text-section > * {
+	max-width: 80%;
+}
+
+.gray-section .article-preview:nth-child(odd){
+	background-color: rgba(0,0,0,0.3);
+}
+
+.purple-section {
+	background-color: #3f3965;
+
+	color: #fff;
+	padding: 80px;
+}
+
+.purple-section .heading-wrapper {
+	text-align: center;
+}
+
+.heading-wrapper .hr{
+	background-color: #373259;
+	width: 60%;
+	margin-top: 20px;
+}
+
+
+.card {
+	float: left;
+	width:50%;
+	padding: 50px;
+	box-sizing: border-box;
+}
+
+.card:first-child {
+	background:rgba(0,0,0,.04);
+}
+
+.card:nth-child(2) {
+	background:rgba(0,0,0,.08);
+}
+.card:nth-child(3) {
+	background:rgba(0,0,0,.12);
+}
+.card:nth-child(4) {
+	background:rgba(0,0,0,.16);
+}
+
+footer {
+	background: #333;
+	min-height: 200px;
+	text-align: center;
+	color: #fff;
+}
+
+ul.share-group {
+	display: block;
+	margin:0 auto;
+	max-width: 1080px;
+	padding: 50px;
+}
+ul.share-group li {
+	display: inline-block;
+	padding: 10px;
+}
+
+.main-wrapper {
+	max-width: 100%;
+	overflow: hidden;
+	margin: 0 auto;
+	background: #444 url(../img/banner.jpg) no-repeat center center;
+	background-attachment: fixed;
+	background-size: cover;
+}

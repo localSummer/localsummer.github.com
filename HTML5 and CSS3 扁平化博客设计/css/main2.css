@@ -1,0 +1,398 @@
+/* 扁平化博客设计全部样式 */
+
+/* 通用样式 */
+a {
+	text-decoration: none;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+h1,h2 {
+	margin: 0;
+}
+
+.hr {
+	height:2px;
+	width: 100%;
+}
+
+.sub-heading {
+	font-size: 18px;
+	letter-spacing: 1px;
+}
+
+button {
+	border: none;
+	outline: none;
+}
+
+.clearfix:after {
+	display: block;
+	content:'';
+	clear:both;
+}
+
+.wrapper {
+	max-width: 1080px;
+	margin: 0 auto;
+}
+
+.main-wrapper {
+	background: #444 url(../img/banner.jpg)  no-repeat center center;
+	background-attachment: fixed;
+	/* 可以让背景图响应式变大或缩小 */
+	max-width: 100%;
+	background-size: cover;
+}
+/* 通用样式结束 */
+
+/* header 头部样式 */
+header {
+	background: rgba(0,0,0,0.4);
+}
+
+nav {
+	width: 100%;
+	height:50px;
+	background-color: transparent;
+}
+
+nav .logo {
+	float: left;
+	line-height: 50px;
+	padding-left: 20px;
+	font-weight: bold;
+	font-size: 20px;
+	letter-spacing: 1px;
+}
+
+nav .logo a{
+	color: #fff;
+}
+
+nav ul {
+	float: right;
+	line-height: 50px;
+}
+
+nav ul li {
+	display: inline-block;
+	color: #fff;
+	box-sizing: border-box;
+	height: 50px;
+}
+
+nav ul li.active {
+	border-bottom:2px solid #fff;
+}
+
+nav ul li a{
+	color: #fff;
+	display: inline-block;
+	padding: 0 20px;
+	height: 50px;
+	letter-spacing: 1px;
+}
+
+.banner {
+	width:100%;
+	height: 700px;
+	background-color: transparent;
+	text-align: center;
+	color:white;
+}
+
+.banner .inner {
+	max-width: 300px;
+	margin: 0 auto;
+	position: relative;
+	top: 160px;
+}
+
+
+.banner .inner h1 {
+	letter-spacing: 1px;
+	margin: 15px 0;
+	border-top: 2px solid #fff;
+	border-bottom: 2px solid #fff;
+	padding:15px 0;
+}
+
+.banner .inner p {
+	margin:40px 0;
+	line-height: 30px;
+}
+
+.banner .inner button {
+	padding:15px 50px;
+	border-radius: 6px;
+	background-color: #18a;
+	color: white;
+	letter-spacing: 4px;
+	font-size: 20px;
+}
+
+.banner .more {
+	margin-top: 200px;
+}
+/* header 头部样式结束 */
+
+/* 主题内容区域 */
+.green-section {
+	width: 100%;
+	background-color:#089D80;
+	text-align: center;
+	color: #fff;
+	padding: 100px 0;
+}
+
+.green-section h2 {
+	letter-spacing: 1px;
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+
+.green-section .hr {
+	background-color: #078494;
+	width: 50%;
+	margin: 0 auto;
+}
+
+.green-section .icon-group {
+	margin-top: 60px;
+}
+
+.green-section .icon-group span {
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	border: 1px solid #0D6F7c;;
+	transform: rotate(45deg);
+	margin-right: 40px;
+}
+
+.gray-section {
+	background-color: #252F34;
+	color: #fff;
+	/* 防止图片与下面的div之间出现间隔，如果需要重新设置font-size 只需要覆盖掉改样式就可以了 */
+	font-size: 0;
+}
+
+.gray-seection .article-preview {
+	width: 100%;
+}
+
+.gray-section .article-preview .img-section {
+	width:45%;
+	float: left;
+}
+
+.gray-section .article-preview .img-section img {
+	/*使图片的宽度正好盛满整个父容器，如果不进行设置的话，这个图片就会溢出它的父元素*/
+	width: 100%;
+}
+
+.gray-section .article-preview .text-section {
+	width: 55%;
+	float: left;
+}
+
+.gray-section .article-preview .text-section h2 {
+	padding-top: 100px;
+	padding-left: 60px;
+	letter-spacing: 1px;
+}
+
+.gray-section .article-preview .text-section p{
+	padding: 0 60px;
+}
+
+.gray-section .article-preview:nth-child(odd) {
+	background: rgba(0,0,0,0.3);
+}
+
+.purple-section {
+	background-color:#3f3965;
+	color: #fff;
+	text-align: center;
+	padding-bottom: 80px;
+}
+
+.purple-section .wrapper h2 {
+	padding-top: 80px;
+	letter-spacing: 1px;
+}
+
+.purple-section .wrapper .hr {
+	width: 60%;
+	background-color: #373259;
+	margin: 20px auto;
+}
+
+.purple-section .wrapper .item-group {
+	margin-top: 30px;
+}
+
+.purple-section .wrapper .item-group h3 {
+	font-size: 22px;
+	text-align: left;
+}
+
+.purple-section .wrapper .item-group p {
+	text-align: left;
+}
+
+.purple-section .wrapper .item {
+	width: 50%;
+	float: left;
+	box-sizing: border-box;
+	padding: 50px;
+}
+
+.purple-section .wrapper .item:nth-child(1) {
+	background: rgba(0,0,0,0.04);
+}
+
+.purple-section .wrapper .item:nth-child(2) {
+	background: rgba(0,0,0,0.08);
+}
+
+.purple-section .wrapper .item:nth-child(3) {
+	background: rgba(0,0,0,0.12);
+}
+
+.purple-section .wrapper .item:nth-child(4) {
+	background: rgba(0,0,0,0.16);
+}
+/* 主题内容区域结束 */
+
+/* footer 脚部样式 */
+footer {
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+}
+
+footer .show-group li {
+	display: inline-block;
+}
+
+footer .show-group {
+	padding: 50px 0;
+	height: 50px;
+	line-height: 50px;
+}
+
+footer .show-group li a {
+	color: white;
+	display: inline-block;
+	padding:0 20px;
+	letter-spacing: 2px;
+	height: 50px;
+}
+
+footer .copy {
+	padding-bottom: 50px;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+/* footer 脚部样式结束 */
+
+/* 组件-遮罩 */
+#mark {
+	display: none;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0,0,0,0.3);
+}
+/* 组件-遮罩结束 */
+
+/* 组件-侧栏菜单 */
+#sidebar {
+	width: 300px;
+	position: fixed;
+	background-color: #333;
+	top: 0;
+	bottom : 0;
+	right: -300px;
+	transition: right 0.6s;
+}
+
+#sidebar ul {
+	box-sizing: border-box;
+	padding-top: 20px;
+}
+
+#sidebar ul a {
+	display: block;
+	padding: 15px 50px;
+	color: #fff;
+}
+
+#sidebar ul a:hover {
+	background-color: #444;
+}
+/* 组件-侧栏菜单结束 */
+
+/* 组件-返回顶部 */
+.backToTop {
+	display: none;
+	background-color: #222;
+	color: #fff;
+	position: fixed;
+	right:50px;
+	bottom: 50px;
+	padding: 10px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+/* 组件-返回顶部结束 */
+
+/* 文章页开始 */
+.article-banner {
+	height: 300px;
+}
+
+.article-banner .inner {
+	top: 30px;
+}
+
+.article-banner .inner h1 {
+	border: none;
+}
+
+.article {
+	background-color: #fff;
+}
+
+.article-content {
+	max-width: 1080px;
+	margin: 0 auto;
+	background-color: #fff;
+	padding: 30px;
+}
+
+.article-content .edit {
+	color:#777;
+	text-align: center;
+	font-size: 14px;
+}
+
+.article-main {
+	padding: 20px 50px;
+}
+
+.article-main p {
+	margin: 0;
+	font-size: 18px;
+	letter-spacing: 1px;
+	line-height: 2;
+}
+/* 文章页开始结束 */

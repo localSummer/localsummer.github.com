@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>焦点轮播效果图2</title>
+	<link rel="stylesheet" href="">
+	<style type="text/css">
+	* {
+		margin: 0;
+		padding: 0;
+		text-decoration: none;
+	}
+	#container {
+		width: 600px;
+		height: 400px;
+		overflow: hidden;
+		border: 3px solid #333;
+		position: relative;
+		margin: 100px auto;
+	}
+	#list {
+		width: 4200px;
+		height: 400px;
+		position: absolute;
+		z-index: 1;
+	}
+	#list img {
+		float: left;
+	}
+	#buttons {
+		position: absolute;
+		width: 100px;
+		height: 10px;
+		z-index: 2;
+		bottom: 10px;
+		left: 250px;
+	}
+	#buttons span {
+		float: left;
+		width: 10px;
+		height: 10px;
+		border: 1px solid #fff;
+		border-radius: 50%;
+		background-color: #333;
+		margin-right: 5px;
+		cursor: pointer;
+	}
+	.arrow {
+		display: none;
+		position: absolute;
+		z-index: 2;
+		width: 40px;
+		height: 40px;
+		font-size: 36px;
+		font-weight: bold;
+		line-height: 39px;
+		background-color: rgba(0, 0, 0, .3);
+		cursor: pointer;
+		color: #fff;
+		top: 180px;
+		text-align: center;
+	}
+	#prev {
+		left: 20px;
+	}
+	#next {
+		right: 20px;
+	}
+	#container:hover .arrow {
+		display: block;
+	}
+	.arrow:hover {
+		background-color: rgba(0, 0, 0, .7);
+	}
+	/* 只写成 .on 的话就会导致样式无法渲染成功，因为 .on 的优先级没有 #buttons span 的优先级高 */
+	#buttons .on {
+		background-color: orangered;
+	}
+	</style>
+
+	<script type="text/javascript">
+		window.onload=function(){
+			var container = document.getElementById('container');
+			var buttons = document.getElementById('buttons').getElementsByTagName('span');
+			var prev = document.getElementById('prev');
+			var next =document.getElementById('next');
+			var index = 1; //index变量用来标识当前是哪一张图片
+			var time;
+			var interval = 3000;
+			var animated = false; //用来标识动画是否完成
+			/* 3.动画过度效果 */
+			function animate(offset){
+				var timer = 300;
+				var interval = 10;
+				var speed = offset/(timer/interval);
+				var left = parseInt(list.style.left) + offset;
+				var go = function(){
+					if((speed < 0 && parseInt(list.style.left) > left) || (speed > 0 && parseInt(list.style.left) < left)) {
+						animated = true;
+						list.style.left = parseInt(list.style.left) + speed +'px';
+						setTimeout(go,interval); //先移动一次，然后等待10毫秒再次判断是否移动
+					}else {
+						list.style.left = left + 'px';
+						/*到达目的地以后就得判断图片是否到达了转折点，如果放到go()的下面就会被提前执行而失去作用*/
+						if(parseInt(list.style.left) < -3000){
+							list.style.left = '-600px';
+						}
+						if(parseInt(list.style.left) > -600) {
+							list.style.left = '-3000px';
+						}
+						animated = false;
+					}
+				};
+				go();
+
+				/*list.style.left = parseInt(list.style.left) + offset + 'px';
+				if(parseInt(list.style.left) < -3000){
+					list.style.left = '-600px';
+				}
+				if(parseInt(list.style.left) > -600) {
+					list.style.left = '-3000px';
+				}*/
+			}
+			// 1.箭头控制移动
+			next.onclick = function(){
+				if(animated){
+					return;
+				}
+				if(index === 5){
+					index = 1;
+				}else{
+					index++;
+				}
+				animate(-600);
+				showButton();
+			};
+			prev.onclick = function(){
+				if(animated){
+					return;
+				}
+				if(index === 1){
+					index = 5;
+				}
+				else {
+					index--;
+				}
+				animate(600);
+				showButton();
+			};
+			// 箭头控制移动结束
+
+			// 2.按钮控制移动
+			function showButton(){
+				for(var j = 0;j<buttons.length;j++){
+					if(buttons[j].className == 'on'){
+						buttons[j].className = '';
+						break;
+					}
+					//这时候需要知道点击的是哪一个按钮
+				}
+				buttons[index - 1].className = 'on';
+			}
+			for(var i = 0;i < buttons.length; i++){
+				buttons[i].onclick = function(){
+					if(animated){
+						return;
+					}
+					if(this.className == 'on'){
+						return;
+					}
+					var myIndex = parseInt(this.getAttribute('index')); // 该变量是用来标记鼠标点击按钮上的哪一张图片
+					var offset = -600 * (myIndex - index);
+					index = myIndex;
+					animate(offset);
+					showButton();
+				};
+			}
+			/* 按钮控制移动结束 */
+
+			/* 自动播放 */
+			function play(){
+				time=setInterval(function(){
+					next.onclick(); //利用模拟单机效果
+				},interval);
+			}
+			function stop(){
+				clearInterval(time);
+			}
+			container.onmouseover = stop;
+			container.onmouseout = play;
+			play();
+		};
+	</script>
+</head>
+<body>
+	<div id="container">
+		<div id="list" style="left:-600px">
+			<img src="img/5.jpg" alt="">
+			<img src="img/1.jpg" alt="">
+			<img src="img/2.jpg" alt="">
+			<img src="img/3.jpg" alt="">
+			<img src="img/4.jpg" alt="">
+			<img src="img/5.jpg" alt="">
+			<img src="img/1.jpg" alt="">
+		</div>
+		<div id="buttons">
+			<span index="1" class="on"></span>
+			<span index="2"></span>
+			<span index="3"></span>
+			<span index="4"></span>
+			<span index="5"></span>
+		</div>
+		<a href="javascript:;" id="prev" class="arrow">&lt;</a>
+		<a href="javascript:;" id="next" class="arrow">&gt;</a>
+	</div>
+</body>
+</html>
