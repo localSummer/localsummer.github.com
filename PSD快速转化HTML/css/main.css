@@ -1,0 +1,180 @@
+.banner {
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+.banner .banner-img {
+	max-width: 1500px;
+	margin: 0 auto;
+}
+
+.banner .banner-info  {
+	width: 776px;
+	position: absolute;
+	top: 220px;
+	left:50%;
+	margin-left: -388px;
+	text-align: center;
+}
+
+.banner .banner-info p {
+	color: #fff;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+
+.banner .banner-info p .line {
+	display: inline-block;
+	width: 40px;
+	border-top: 1px solid #fff;
+	vertical-align: middle;
+}
+
+.banner .banner-info .banner-text {
+	margin: 0 27px;
+}
+
+.content {
+	max-width: 1500px;
+	margin: 0 auto;
+	border-top: 4px solid #ff3333;
+}
+
+.content .content-menu {
+	position: relative;
+	width: 156px;
+	height: 71px;
+	background-color: #ff3333;
+	margin: 0 auto;
+	font-size: 20px;
+	color: #fff;
+	text-align: center;
+	line-height: 71px;
+	font-weight: bold;
+}
+
+.content .content-menu .trangle {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 0;
+	height: 0px;
+	border-top: 61px solid transparent;
+	border-left: 78px solid transparent;
+	border-right: 78px solid transparent;
+	border-bottom: 11px solid #fff;
+}
+
+.content .list-group {
+	margin-top: 92px;
+	font-size: 0;
+}
+
+.content .content-list {
+	width: 50%;
+	float: left;
+	margin-bottom: 56px;
+}
+
+.content .content-list h3 {
+	font-size: 16px;
+	display: inline-block;
+	color: #666;
+	letter-spacing: 1px;
+}
+
+.content .content-list span {
+	font-size: 16px;
+	letter-spacing: 1px;
+	font-weight: bold;
+	color: #999;
+}
+
+.content .content-list .line {
+	display: inline-block;
+	width: 192px;
+	border-top: 1px solid #ccc;
+	margin: 0 42px;
+	position: relative;
+	bottom: 3px;
+}
+
+.content .content-list p {
+	font-size: 12px;
+	color: #ccc;
+	line-height: 20px;
+}
+
+.content .content-load {
+	text-align: center;
+}
+
+.content .content-more {
+	margin: 0 auto;
+	width: 130px;
+	height: 32px;
+	border: 1px solid #ccc;
+	line-height: 32px;
+	color: #ccc;
+	padding-right: 10px;
+	background: url(../img/trangle1.png) no-repeat 118px 55%;
+	cursor: pointer;
+}
+
+.list-panel {
+	margin-top:200px;
+}
+
+.list-panel h2 {
+	font-size: 20px;
+	color: #333;
+}
+
+.list-panel .img-show {
+	margin-top: 78px;
+}
+
+.list-panel .img-show .img-col {
+	width: 230px;
+	float: left;
+	margin-right: 60px;
+}
+
+.list-panel .img-show .img-col.img-last {
+	margin-right: 0;
+}
+
+.list-panel .img-show .img-col img {
+	margin-bottom: 28px;
+}
+
+.list-panel .img-show .img-col h3 {
+	font-size: 16px;
+	color: #666;
+	display: inline-block;
+	font-weight: normal;
+}
+
+.list-panel .img-show .img-col span {
+	letter-spacing: 1px;
+	color: #666;
+	float: right;
+}
+
+.list-panel .img-show .img-col p {
+	margin-top: 11px;
+}
+
+.list-panel .img-show .img-col p .star{
+	float: left;
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	background: url(../img/star.png) no-repeat;
+	margin-right: 5px;
+}
+
+.list-panel .img-show .img-col p .star-gray {
+	background: url(../img/star_gray.png) no-repeat;
+}
