@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JS+CSS3实现带预览图幻灯片效果</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+	<!-- 修改view转换为模版,关键字替换 -->
+    <div class="slider">
+    	<div class="main" id="template_main">
+    		<div class="main-i {{css}}" id="main_{{index}}">
+    			<div class="caption">
+					<h2>{{h2}}</h2>
+    				<h3>{{h3}}</h3>
+    			</div>
+    			<img class="picture" src="imgs/{{index}}.jpg" alt="">
+    		</div>
+    	</div>
+    	<div class="ctrl" id="template_ctrl">
+    		<a class="ctrl-i" id="ctrl_{{index}}" href="javascript:;">
+    			<img src="imgs/{{index}}.jpg" alt="">
+    		</a>
+    	</div>
+        <!-- 幻灯片左右箭头 -->
+        <a class="arrow" id="prev" href="javascript:;">&lt;</a>
+        <a class="arrow" id="next" href="javascript:;">&gt;</a>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

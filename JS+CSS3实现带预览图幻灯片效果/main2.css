@@ -1,0 +1,191 @@
+/* 初始化样式 */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	padding: 50px 0;
+	background-color: #fff;
+	font-size: 14px;
+	color: #555;
+	/* 本地没有这个字体 */
+	font-family: 'Avenir Next';
+	/* webkit 支持的一个字体抗锯齿的样式 */
+	-webkit-font-smoothing: antialiased;
+}
+/* 初始化样式结束 */
+
+.slider,.slider .main,.slider .main .main-i {
+	width: 100%;
+	height: 400px;
+	position: relative;
+}
+
+/* 幻灯片的区域 */
+.slider .main {
+	overflow: hidden;
+}
+
+/* 每一个幻灯片的样式 */
+.slider .main .main-i img {
+	width:100%;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	z-index: 2;
+}
+
+.slider .main .main-i .caption {
+	position: absolute;
+	z-index: 3;
+	top: 30%;
+	right: 50%;
+}
+
+.slider .main .main-i .caption h2 {
+	font-size: 40px;
+	line-height: 50px;
+	color: #b5b5b5;
+	text-align: right;
+}
+
+.slider .main .main-i .caption h3 {
+	font-size: 70px;
+	line-height: 70px;
+	color: #000;
+	text-align: right;
+	/* 本地没有这个样式 */
+	font-family: 'Open Sans Condensed';
+}
+
+/* 控制按钮区域 */
+.slider .ctrl {
+	width: 100%;
+	height: 13px;
+	line-height: 13px;
+	position: absolute;
+	left: 0;
+	bottom: -13px;
+	text-align: center;
+	/* 去除掉每个控制按钮之间默认的间隙，这个间隙是由他们之间出现的空格导致的 */
+	font-size: 0;
+}
+
+/* 每一个控制按钮样式 */
+.slider .ctrl .ctrl-i {
+	display: inline-block;
+	width: 150px;
+	height: 13px;
+	background-color: #666;
+	position: relative;
+	box-shadow: 0 1px 1px rgba(0,0,0,.3);
+	margin-left: 1px;
+}
+
+.slider .ctrl .ctrl-i img {
+	width:100%;
+	position: absolute;
+	left: 0;
+	bottom: 50px;
+	z-index: 3;
+	opacity: 0;
+	transition: all .2s;
+}
+
+/* hover 到控制按钮 */
+.slider .ctrl .ctrl-i:hover {
+	background-color: #f0f0f0;
+}
+
+.slider .ctrl .ctrl-i:hover img {
+	bottom: 13px;
+	opacity:1;
+}
+
+/* active 按钮展现时的状态 */
+.slider .ctrl .ctrl-i_active,.slider .ctrl .ctrl-i_active:hover {
+	background-color: #000;
+}
+
+.slider .ctrl .ctrl-i_active:hover  img {
+	opacity: 0;
+}
+
+/* 幻灯片切换的样式 */
+.slider .main .main-i {
+	position: absolute;
+	right: 50%;
+	opacity: 0;
+	transition: all 0.5s;
+}
+
+.slider .main .main-i_active,.slider .main #main_background {
+	opacity: 1;
+	right: 0;
+	top: 0;
+}
+
+.slider .main #main_background {
+	z-index: -1;
+}
+
+.slider .main .main-i .caption h2 {
+	margin-right: 45px;
+	opacity: 0;
+	transition: all 1s .8s;
+}
+
+.slider .main .main-i .caption h3 {
+	margin-right: -45px;
+	opacity: 0;
+	transition: all 1s .8s;
+}
+
+.slider .main .main-i_active .caption h2,.slider .main .main-i_active .caption h3 {
+	margin-right: 0;
+	opacity: 1;
+}
+
+.slider .main .main-i .caption {
+	margin-right: 13%;
+}
+
+/* 幻灯片左右剪头 */
+.arrow {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background-color: rgba(0,0,0,.2);
+    text-decoration: none;
+    font-size: 30px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.arrow:hover {
+    background-color: rgba(0,0,0,.5);
+}
+
+#prev {
+    top: 50%;
+    left: 3%;
+    margin-top: -20px;
+}
+
+#next {
+    right: 3%;
+    top: 50%;
+    margin-top: -20px;
+}
+
+.slider:hover .arrow {
+    display: inline-block;
+}
+
+
