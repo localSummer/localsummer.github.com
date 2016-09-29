@@ -1,0 +1,182 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 10pt;
+}
+
+.topmenu {
+	margin: 50px 0 0 50px;
+	list-style: none;
+	width: 220px;
+	border: 2px solid #e4393c;
+	position: relative;
+}
+
+.toptitle {
+	height: 40px;
+	line-height: 40px;
+	font-size: 11pt;
+	font-weight: bold;
+	color: #fff;
+	background: #e4393c;
+	padding-left: 20px;
+}
+
+.topmenu li {
+	height: 30px;
+	line-height: 30px;
+	font-size: 11pt;
+	padding-left: 8px;
+	z-index: 3;
+}
+
+.topmenu li a {
+	text-decoration: none;
+	color: #313131;
+}
+
+
+.topmenu li a:hover {
+	text-decoration: underline;
+	font-weight: bold;
+	color: #e4393c;
+}
+
+.topmenu li:hover {
+	border: 1px solid #DDD;
+	border-right: 0;
+	border-left: 4px solid #e4393c;
+	box-shadow: 0 0 8px #DDD;
+	-moz-box-shadow: 0 0 8px #DDD;
+	-webkit-box-shadow: 0 0 8px #DDD;
+	height: 60px;
+}
+
+.topmenu li b {
+	display: none;
+}
+
+.topmenu li:hover b {
+	display: block;
+	height: 30px;
+	line-height: 30px;
+	font-weight: normal;
+	font-size: 10pt;
+}
+
+.topmenu li:hover span {
+	display: inline-block;
+	width: 20px;
+	height: 60px;
+	float: right;
+	background: #fff;
+	position: relative;
+	z-index: 20;/* 比子菜单的优先级还要高因此可以盖住子菜单的边框 */
+	right: -2px;
+}
+
+.submenu {
+	display: none;
+	width: 715px;
+	left: 218px;
+	position: absolute;
+	top: 40px;/* top:0 时在ul的 border 内测边缘 */
+	border: 1px solid #DDD;
+	z-index: 4;
+	background: #fff;
+	box-shadow: 0 0 8px #DDD;
+}
+
+.topmenu li:hover .submenu {
+	display: block;
+}
+
+.leftdiv {
+	float: left;
+	width: 490px;
+	margin: 5px;
+}
+
+.leftdiv dl {
+	border-bottom: 1px solid #EEE;
+	padding-bottom: 8px;
+	overflow: hidden;
+	margin-top: 5px;
+}
+
+.leftdiv dl dt {
+	float: left;
+	width: 60px;
+	text-align: right;
+	height: 22px;
+	line-height: 22px;
+	padding-right: 6px;
+}
+
+.leftdiv dl dt a {
+	color: #e4393c;
+	text-decoration: underline;
+	font-weight: bold;
+	font-size: 10pt;
+}
+
+.leftdiv dl dd {
+	overflow: hidden;
+	font-size: 0;
+	line-height: 14px;
+}
+
+/* 需要反复推敲一下 */
+.leftdiv dl dd a {
+	display: inline-block;
+	border-left: 1px solid #ccc;
+	color: #737373;
+	font-size: 9pt;
+	padding: 0 8px;
+	height: 14px;
+	line-height: 14px;
+	margin: 4px 0;
+}
+
+.rightdiv {
+	float: left;
+	width: 200px;
+	margin: 5px;
+	padding-top: 10px;
+}
+
+.rightdiv dl dt {
+	color: #e4393c;
+	font-weight: bold;
+	font-size: 10pt;
+}
+
+.topmenu .rightdiv dl dd {
+	line-height: 25px;
+}
+
+.topmenu li .rightdiv a {
+	display: inline-block;
+	font-size: 9pt;
+	color: #737373;
+	line-height: 22px;
+}
+
+.topmenu li .rightdiv a:hover {
+	font-weight: normal;
+}
+
+.rightdiv a img{
+	width: 194px;
+	height: 70px;
+}
+
+.rightdiv .rightPic {
+	position: relative;
+	right: -45px;
+	bottom: -30px;
+}
+

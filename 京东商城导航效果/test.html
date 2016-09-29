@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<style type="text/css">
+	* {
+		padding: 0;
+		margin: 0;
+	}
+	.div1 {
+		width: 500px;
+		height: 300px;
+		background: #ccc;
+		padding: 20px;
+		border: 10px solid red;
+		position: relative;
+	}
+
+	.div2 {
+		width: 200px;
+		height: 200px;
+		background: #333;
+		position: absolute;/* 绝对定位只会覆盖到padding上，不会覆盖到border上 */
+		top: 0;
+		left: 0;
+		padding: 5px;
+		border: 5px solid green;
+	}
+</style>
+<body>
+	<div class="div1">
+		<div class="div2"></div>
+	</div>
+</body>
+</html>
